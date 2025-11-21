@@ -1,0 +1,361 @@
+ * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      /* LEFT AREA */
+      .left {
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fafafa;
+        flex-wrap: wrap;
+      }
+      .left img {
+        width: 70%;
+        height: 60%;
+      }
+
+      /* RIGHT AREA */
+      .right {
+        background-color: white;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+      }
+
+      /* LOGO */
+      #logo {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+
+      /* TEXT AREA */
+      #welcome {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #welcome p {
+        font-size: 1.2rem;
+        color: #666666;
+      }
+
+      /* INPUT BOX */
+      #input {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #input input {
+        width: 80%;
+        height: 35%;
+        font-size: 20px;
+        border: 1px solid #666666;
+      }
+      #input input:hover {
+        border-left: 9px solid #fecb2a;
+        width: 79%;
+      }
+      #input div {
+        width: 80%;
+        height: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #input div p {
+        width: 130px;
+        color: #666666;
+      }
+
+      /* BUTTONS */
+      #button {
+        width: 70%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #button button {
+        width: 30%;
+        height: 75%;
+        font-size: 18px;
+      }
+
+      #login {
+        background-color: #fecb2a;
+        color: #fff;
+        border: 0px;
+      }
+      #sign {
+        background-color: #fff;
+        color: #fecb2a;
+        border: 1px solid #fecb2a;
+      }
+
+      /* SUGGEST */
+      #suggest {
+        width: 70%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        margin-left: 30px;
+      }
+      #suggest p {
+        font-size: 18px;
+        color: #666666;
+      }
+
+      @media (max-width: 1024px) {
+        #input input {
+          font-size: 18px;
+        }
+
+        #button button {
+          width: 40%;
+          font-size: 17px;
+        }
+
+        #suggest p {
+          font-size: 16px;
+        }
+
+        .left img {
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .left,
+        .right {
+          width: 100%;
+          height: 100vh;
+        }
+
+        .left img {
+          width: 70%;
+          height: auto;
+          margin-top: 20px;
+        }
+
+        #input input {
+          height: 45px;
+          font-size: 18px;
+        }
+
+        #button {
+          width: 85%;
+          margin-left: 30px;
+        }
+
+        #button button {
+          width: 45%;
+          height: 50px;
+          font-size: 16px;
+        }
+
+        #suggest {
+          width: 58%;
+          margin-left: 75px;
+          justify-content: space-between;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #welcome p {
+          font-size: 1rem;
+        }
+
+        #input input {
+          width: 90%;
+          height: 45px;
+          font-size: 16px;
+        }
+
+        #input div {
+          width: 90%;
+          font-size: 14px;
+        }
+
+        #button {
+          width: 90%;
+        }
+
+        #button button {
+          width: 48%;
+          height: 45px;
+          font-size: 15px;
+        }
+
+        #suggest {
+          width: 60%;
+          height: 10%;
+          margin-left: 20px;
+          justify-content: space-between;
+        }
+        #suggest p {
+          font-size: 12px;
+        }
+
+        .left img {
+          width: 90%;
+          height: auto;
+        }
+        #button {
+          width: 90%;
+          margin: 0px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        #welcome p {
+          font-size: 0.9rem;
+        }
+
+        #input input {
+          font-size: 14px;
+        }
+
+        #button button {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        body {
+          font-size: 18px;
+        }
+
+        #welcome p {
+          font-size: 1.5rem;
+        }
+
+        #input input {
+          font-size: 22px;
+          height: 45px;
+        }
+
+        #button button {
+          font-size: 20px;
+          height: 55px;
+        }
+
+        #suggest p {
+          font-size: 20px;
+        }
+
+        #logo img {
+          width: 230px;
+        }
+      }
+
+      @media (min-width: 1920px) {
+        body {
+          font-size: 20px;
+        }
+
+        #welcome p {
+          font-size: 1.7rem;
+        }
+
+        #input input {
+          font-size: 24px;
+          height: 55px;
+        }
+
+        #button button {
+          font-size: 22px;
+          height: 60px;
+        }
+
+        #suggest p {
+          font-size: 22px;
+        }
+
+        #logo img {
+          width: 260px;
+        }
+
+        .left img {
+          width: 60%;
+        }
+      }
+
+      @media (min-width: 2560px) {
+        body {
+          font-size: 22px;
+        }
+
+        #welcome p {
+          font-size: 2rem;
+        }
+
+        #input input {
+          font-size: 26px;
+          height: 65px;
+        }
+
+        #button button {
+          font-size: 24px;
+          height: 70px;
+        }
+
+        #suggest p {
+          font-size: 24px;
+        }
+
+        #logo img {
+          width: 300px;
+        }
+
+        .left img {
+          width: 55%;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .left {
+          display: none;
+        }
+
+        .right {
+          width: 100%;
+          height: 100vh;
+          padding-top: 30px;
+        }
+
+        .container {
+          flex-direction: column;
+          height: auto;
+        }
+      }

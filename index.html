@@ -4,214 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuizGrad Landing</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-      }
-      .container {
-        display: flex;
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-      }
-      nav {
-        height: 10vh;
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      nav ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        gap: 50px;
-        color: #cdcccc;
-      }
-      nav ul li{
-        cursor: pointer;
-      }
-      .main {
-        width: 90%;
-        height: 80vh;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .left {
-        width: 40%;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .left img {
-        width: 100%;
-        height: 100%;
-      }
-      #login {
-        height: 35px;
-        width: 130px;
-        font-size: 20px;
-        color: #fecb2a;
-        background-color: #fff;
-        border: 1px solid #fecb2a;
-        cursor: pointer;
-      }
-      .right {
-        width: 50%;
-        height: 60vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .top {
-        height: 30vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding-left: 115px;
-        font-size: 23px;
-      }
-      .quiz {
-        height: 5vh;
-        width: 100%;
-        display: flex;
-        font-size: 10px;
-        margin-left: 130px;
-        flex-direction: column;
-        justify-content: space-around;
-        border-left: 3px solid;
-        padding-left: 9px;
-        color: #666;
-      }
-      .button {
-        height: 10vh;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-left: 115px;
-        gap: 55px;
-      }
-      #start {
-        background-color: #fecb2a;
-        color: #fff;
-        border: 0;
-        font-size: 15px;
-        width: 130px;
-        height: 70%;
-        cursor: pointer;
-        border-radius: 2px;
-      }
-      #start:hover{
-        background-color: #f0cd61;
-      }
-      #know {
-        background-color: #fff;
-        color: #fecb2a;
-        border: 0px;
-        font-size: 15px;
-        width: 130px;
-        height: 70%;
-        cursor: pointer;
-      }
-      #overlay {
-        height: 80vh;
-        width: 65%;
-        position: absolute;
-        background-color: #fff;
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: 0px 0px 172px 0px;
-      }
-      #overlay #x {
-        height: 5vh;
-        width: 100%;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-      }
-      #overlay #x img {
-        height: 20px;
-        width: 20px;
-        margin-right: 25px;
-        cursor: pointer;
-      }
-      .start {
-        height: 15vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .selection {
-        height: 40vh;
-        width: 100%;
-      }
-      .selection ul {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        gap: 20px;
-        color: #fff;
-        font-size: 20px;
-      }
-      .selection li {
-        padding: 15px;
-        cursor: pointer;
-        background: #666;
-        color: #fff;
-        border-radius: 2px;
-        transition: 0.3s;
-      }
-      .selection li.selected {
-        background: #fecb2a;
-      }
-      #overlay .button {
-        height: 10vh;
-        width: 80%;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-      }
-      #overlay .button button {
-        height: 60%;
-        width: 100px;
-        font-size: 20px;
-        background: #fecb2a;
-        border-radius: 2px;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div class="container">
       <nav>
-        <img src="image/Group 114.png" alt="">
+        <img src="image/Group 114.png" alt="" />
         <ul>
           <li>How it works</li>
           <li>Features</li>
@@ -232,7 +30,10 @@
           </div>
           <div class="button">
             <button onclick="start()" id="start">Start Solving</button>
-            <button id="know"><img style="height: 30%;" src="image/Layer 2.png" alt=""> Know More</button>
+            <button id="know">
+              <img style="height: 30%" src="image/Layer 2.png" alt="" /> Know
+              More
+            </button>
           </div>
         </div>
         <div class="left">
@@ -242,7 +43,9 @@
     </div>
 
     <div id="overlay">
-      <div id="x" onclick="cancel()"><img src="image/Vector.png" alt="Close" /></div>
+      <div id="x" onclick="cancel()">
+        <img src="image/Vector.png" alt="Close" />
+      </div>
       <div class="start">
         <h1>Choose your favourite topic</h1>
         <h3>Select any one to start the quiz</h3>
@@ -261,40 +64,6 @@
       </div>
     </div>
 
-    <script>
-      const overlay = document.getElementById("overlay");
-      const closeBtn = document.querySelector("#overlay #x img");
-      const forwardBtn = document.getElementById("forward");
-      const container = document.querySelector(".container");
-      let selectedCategory = null;
-      
-      start = () =>  { 
-        overlay.style.display = "flex";
-         container.style.opacity = "0.5"; 
-        };
-      cancel = () => { 
-        overlay.style.display = "none"; 
-        container.style.opacity = "1"; 
-      };
-      
-      
-      const topics = document.querySelectorAll(".topic");
-      topics.forEach((topic) => {
-        topic.addEventListener("click", () => {
-          topics.forEach((t) => t.classList.remove("selected"));
-          topic.classList.add("selected");
-          selectedCategory = topic.textContent.trim();
-        });
-      });
-
-      forwardBtn.addEventListener("click", () => {
-        if (!selectedCategory) {
-          alert("Please select a topic!");
-          return;
-        }
-        localStorage.setItem("selectedCategory", selectedCategory);
-        window.location.href = "quiz.html";
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
