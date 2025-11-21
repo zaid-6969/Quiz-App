@@ -3,7 +3,7 @@ let sign = document.getElementById("sign");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 
-const API_URL = "https://6920098f31e684d7bfcb71de.mockapi.io/api/v1/log";
+const API = "https://6920098f31e684d7bfcb71de.mockapi.io/api/v1/log";
 
 login.addEventListener("click", async () => {
     if (!email.value || !password.value) {
@@ -11,7 +11,7 @@ login.addEventListener("click", async () => {
     }
 
     try {
-        const res = await fetch(API_URL);
+        const res = await fetch(API);
         const users = await res.json();
 
         const user = users.find((u) => u.email === email.value.trim());
@@ -38,7 +38,7 @@ sign.addEventListener("click", async () => {
     }
 
     try {
-        const res = await fetch(API_URL);
+        const res = await fetch(API);
         const users = await res.json();
 
         const exists = users.find((u) => u.email === email.value.trim());
@@ -47,7 +47,7 @@ sign.addEventListener("click", async () => {
             return alert("Email already registered!");
         }
 
-        await fetch(API_URL, {
+        await fetch(API, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

@@ -18,7 +18,7 @@ topics.forEach((topic) => {
     topic.addEventListener("click", () => {
         topics.forEach((t) => t.classList.remove("selected"));
         topic.classList.add("selected");
-        selectedCategory = topic.textContent.trim();
+        selectedCategory = topic.textContent;
     });
 });
 
