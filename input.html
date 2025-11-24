@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .floating-group {
+        position: relative;
+        width: 330px;
+        margin-bottom: 25px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .floating-group input {
+        width: 100%;
+        padding: 14px;
+        padding-top: 20px;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        font-size: 15px;
+        outline: none;
+        transition: 0.3s ease;
+      }
+
+      .floating-group input:focus {
+        border-color: #f1c232;
+        box-shadow: 0 0 4px rgba(241, 194, 50, 0.4);
+      }
+
+      .floating-group label {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        font-size: 15px;
+        color: #777;
+        pointer-events: none;
+        transition: 0.25s ease;
+      }
+
+      /* Move label up when focused or has value */
+      .floating-group input:focus + label,
+      .floating-group input:not(:placeholder-shown) + label {
+        top: -8px;
+        left: 10px;
+        background: white;
+        padding: 0 5px;
+        font-size: 12px;
+        color: #f1c232;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-group">
+      <input type="email" placeholder="" required />
+      <label>Email Address</label>
+    </div>
+
+    <div class="floating-group">
+      <input type="password"placeholder="" required />
+      <label>Password</label>
+    </div>
+  </body>
+</html>

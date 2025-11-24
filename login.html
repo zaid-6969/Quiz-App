@@ -17,21 +17,34 @@
           <p>Please Login/Signup to Your account</p>
         </div>
         <div id="input">
-          <input
-            class="inputs"
-            type="text"
-            id="email"
-            lenght="3"
-            placeholder="Enter your email"
-          />
-          <input
-            class="inputs"
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-          />
-          <div>
-            <p id="checkbox">Remember me</p>
+          <div class="floating-group">
+            <input
+              class="inputs"
+              type="text"
+              id="email"
+              lenght="3"
+              placeholder=""
+              onclick="togglebtn('login')"
+            />
+            <label>Email Address</label>
+          </div>
+          <div class="floating-group">
+            <input
+              class="inputs"
+              type="password"
+              id="password"
+              placeholder=""
+              onclick="togglebtn('sign')"
+            />
+            <label>Password</label>
+          </div>
+          <div class="Remember">
+            <p style="display: flex">
+              <input
+                style="width: 15px; margin-right: 10px"
+                type="checkbox"
+              />Remember me
+            </p>
             <p>Forget Password?</p>
           </div>
         </div>
@@ -41,7 +54,7 @@
         </div>
         <div id="suggest">
           <p>or log in with</p>
-          <p style="color: #fecb2a">FaceBook</p>
+          <p style="color: #fecb2a">Facebook</p>
           <p style="color: #fecb2a">Google</p>
         </div>
       </div>

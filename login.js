@@ -3,6 +3,8 @@ let sign = document.getElementById("sign");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 
+
+
 const API = "https://6920098f31e684d7bfcb71de.mockapi.io/api/v1/log";
 
 login.addEventListener("click", async () => {
@@ -15,11 +17,11 @@ login.addEventListener("click", async () => {
         const users = await res.json();
 
         const user = users.find((u) => u.email === email.value.trim());
-
+        
         if (!user) {
             return alert("Email doesn’t exist");
         }
-
+        
         if (user.password !== password.value.trim()) {
             return alert("Wrong password");
         }
@@ -56,9 +58,12 @@ sign.addEventListener("click", async () => {
             }),
         });
         window.location.href = "index.html";
-        alert("Account created. Please login now!");
+        alert("Account created successfully!");
     } catch (err) {
         alert("Error connecting to server");
         console.error(err);
     }
+
+
 });
+
