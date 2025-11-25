@@ -16,12 +16,12 @@ let userAnswers = [];
 let timer;
 let totalTime = 100;
 let selectedCategory =
-  localStorage.getItem("selectedCategory") || "Programming";
+localStorage.getItem("selectedCategory") || "Programming";
 
 async function fetchQuestions() {
   try {
     const res = await fetch(API);
-    if (!res.ok) throw new Error("Network response not ok");
+    if (!res.ok) throw new Error("Network response is not ok");
     const data = await res.json();
 
     const categoryObj = data.find((c) => c.category === selectedCategory);
@@ -77,11 +77,10 @@ function renderProgressBar() {
 }
 
 function startTimer() {
-  clearInterval(timer);
   let timeLeft = totalTime;
   updateTimerDisplay(timeLeft);
   timer = setInterval(() => {
-    timeLeft--;
+    timeLeft--
     updateTimerDisplay(timeLeft);
     if (timeLeft <= 0) {
       clearInterval(timer);
@@ -194,9 +193,9 @@ function calculateScore() {
 
         resultsHTML += `
             <div class="result-item">
-                <p><strong>Q${i + 1}:</strong> ${escapeHtml(q.question || "")}</p>
-                <p>Your answer: <span class="user-answer ${isCorrect ? "correct" : "wrong"}">${escapeHtml(userAnswerText)}</span></p>
-                <p>Correct answer: <strong>${escapeHtml(correctAnswerText)}</strong></p>
+                <p><strong>Q${i + 1}:</strong> ${q.question || ""}</p>
+                <p>Your answer: <span class="user-answer ${isCorrect ? "correct" : "wrong"}">${userAnswerText}</span></p>
+                <p>Correct answer: <strong>${correctAnswerText}</strong></p>
                 <hr>
             </div>
         `;
@@ -209,26 +208,9 @@ function calculateScore() {
     overlay.style.display = "flex";
 }
 
-function escapeHtml(unsafe) {
-    return String(unsafe)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-}
 
-function calculateScore() {
-  clearInterval(timer);
-  let score = 0;
-  questions.forEach((q, i) => {
-    if (userAnswers[i] === q.answer) score++;
-  });
-  scoreEl.textContent = score;
-  overlay.style.display = "flex";
-}
 function cancel() {
-  window.location.href = "index.html";
+  window.location.href = "main.html";
 }
 
 prevBtn.addEventListener("click", prevQuestion);

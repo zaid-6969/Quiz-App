@@ -27,7 +27,7 @@ login.addEventListener("click", async () => {
         }
 
         localStorage.setItem("loggedUser", JSON.stringify(user));
-        window.location.href = "index.html";
+        window.location.href = "main.html";
     } catch (err) {
         alert("Error connecting to server");
         console.error(err);
@@ -57,7 +57,7 @@ sign.addEventListener("click", async () => {
                 password: password.value.trim(),
             }),
         });
-        window.location.href = "index.html";
+        window.location.href = "main.html";
         alert("Account created successfully!");
     } catch (err) {
         alert("Error connecting to server");

@@ -335,7 +335,6 @@ button {
 
 
 #results-list {
-    max-height: 300px;
     overflow-y: auto;
     text-align: left;
 }
