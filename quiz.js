@@ -30,7 +30,7 @@ async function fetchQuestions() {
         }
 
         questions = categoryObj.quiz;
-       userAnswers = new Array(questions.length);
+        userAnswers = new Array(questions.length);
         showQuestion();
         startTimer();
     } catch (err) {
@@ -117,8 +117,8 @@ function showQuestion() {
         }
 
         div.addEventListener("click", () => {
-          userAnswers[currentIndex] = idx;
-           Array.from(optionsContainer.children).forEach((child) => {
+            userAnswers[currentIndex] = idx;
+            Array.from(optionsContainer.children).forEach((child) => {
                 child.classList.toggle("selected", child === div);
             });
         });
@@ -126,7 +126,7 @@ function showQuestion() {
         optionsContainer.appendChild(div);
     });
 
-   if (currentIndex === questions.length - 1) {
+    if (currentIndex === questions.length - 1) {
         submitBtn.textContent = "Submit";
         skipBtn.style.display = "none";
     } else {
@@ -136,7 +136,7 @@ function showQuestion() {
 }
 
 function nextQuestion() {
-  if (currentIndex < questions.length - 1) {
+    if (currentIndex < questions.length - 1) {
         if (userAnswers[currentIndex] === undefined) {
             alert("Please select an answer before proceeding.");
             return;
@@ -215,10 +215,10 @@ function prevQuestion() {
 //         .replace(/'/g, "&#039;");
 // }
 
-function calculateScore() { 
-    clearInterval(timer); let score = 0; 
-    questions.forEach((q, i) => { if (userAnswers[i] === q.answer) score++; }); 
-    scoreEl.textContent = score; overlay.style.display = "flex"; 
+function calculateScore() {
+    clearInterval(timer); let score = 0;
+    questions.forEach((q, i) => { if (userAnswers[i] === q.answer) score++; });
+    scoreEl.textContent = score; overlay.style.display = "flex";
 }
 function cancel() {
     window.location.href = "index.html";
