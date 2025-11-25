@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizGrad Landing</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <img src="image/Group 114.png" alt="" />
+        <ul>
+          <li>How it works</li>
+          <li>Features</li>
+          <li>About us</li>
+         <a href="login.html"><button id="login">Login</button></a>
+        </ul>
+      </nav>
+
+      <div class="main">
+        <div class="right">
+          <div class="top">
+            <h1>Learn</h1>
+            <h1>new concepts</h1>
+            <h1>for each question</h1>
+          </div>
+          <div class="quiz">
+            <h1>We help you prepare for exams and quizzes</h1>
+          </div>
+          <div class="button">
+            <button onclick="start()" id="start">Start Solving</button>
+            <button id="know">
+              <img style="height: 30%" src="image/Layer 2.png" alt="" /> Know
+              More
+            </button>
+          </div>
+          <div class="sideimage"><img src="image/Vector 4.png" alt=""></div>
+        </div>
+        <div class="left">
+          <img src="image/Group 118.png" alt="Illustration" />
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay">
+      <div id="x" onclick="cancel()">
+        <img src="image/Vector.png" alt="Close" />
+      </div>
+      <div class="start">
+        <h1>Choose your favourite topic</h1>
+        <h3>Select any one to start the quiz</h3>
+      </div>
+      <div class="selection">
+        <ul>
+          <li class="topic">Programming<img class="X" src="image/X container.png" alt=""></li>
+          <li class="topic">Cricket<img class="X" src="image/X container.png" alt=""></li>
+          <li class="topic">Politics<img class="X" src="image/X container.png" alt=""></li>
+          <li class="topic">General Knowledge<img class="X" src="image/X container.png" alt=""></li>
+          <li class="topic">History<img class="X" src="image/X container.png" alt=""></li>
+        </ul>
+      </div>
+      <div class="buttonlast">
+        <button id="forward" style="box-shadow: 0 8px 21px 2px rgba(0, 0, 0, 0.3);">Start</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
